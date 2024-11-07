@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Effects</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation: moveBox 4s ease-in-out 2s infinite forwards;
+        }
+
+        @keyframes moveBox {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(100%, 0); }
+            50% { transform: translate(100%, 100%); }
+            75% { transform: translate(0, 100%); }
+            100% { transform: translate(0, 0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

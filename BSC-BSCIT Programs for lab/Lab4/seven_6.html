@@ -1,0 +1,48 @@
+<!-- 6. Use Bootstrap to display responsive image in webpage. Also use alignment to
+align it in left, center and right side of webpage. 7. Use Bootstrap to create
+thumbnail of image.
+ -->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Image Example</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h2 class="display-4">Responsive Image with Alignment</h2>
+        
+        <div class="mb-4">
+            <h4>Left-aligned Image</h4>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLkrF8vriaLliDV2teTiMSr8RN_nXe2TIKMXL29KFdSvGtoZnmlEuyrPU&s" alt="Placeholder Image" class="img-fluid float-left mr-3">
+            <p class="lead">This image is aligned to the left using Bootstrap's <code>float-left</code> class, and it's also responsive with <code>img-fluid</code>.</p>
+        </div>
+        
+        <div class="mb-4 text-center">
+            <h4>Center-aligned Image</h4>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLkrF8vriaLliDV2teTiMSr8RN_nXe2TIKMXL29KFdSvGtoZnmlEuyrPU&s" alt="Placeholder Image" class="img-fluid">
+            <p class="lead">This image is centered using Bootstrap's <code>text-center</code> class, making it responsive with <code>img-fluid</code>.</p>
+        </div>
+        
+        <div class="mb-4">
+            <h4>Right-aligned Image</h4>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLkrF8vriaLliDV2teTiMSr8RN_nXe2TIKMXL29KFdSvGtoZnmlEuyrPU&s" alt="Placeholder Image" class="img-fluid float-right ml-3">
+            <p class="lead">This image is aligned to the right using Bootstrap's <code>float-right</code> class, and it's also responsive with <code>img-fluid</code>.</p>
+        </div>
+
+        <div class="mb-4">
+            <h4>Thumbnail Image</h4>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLkrF8vriaLliDV2teTiMSr8RN_nXe2TIKMXL29KFdSvGtoZnmlEuyrPU&s" alt="Thumbnail Image" class="img-thumbnail">
+            <p class="lead">This is an image with the <code>img-thumbnail</code> class applied, giving it a rounded border and padding.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+ 

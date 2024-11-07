@@ -1,0 +1,36 @@
+<!--
+6. Write HTML, CSS3 code for following animation effects. (A)
+1. Changing background colour of div from red to yellow.
+2. Moving div from Left to right, right to bottom, bottom to left and left to top.
+3. Put delay of 2s in animation.
+4. Change animation-iteration count property of program 2 to run infinite times
+5. Change animation direction property to run it in reverse order.
+6. Change value of animation-timing-function property to change the speed of
+animation
+-->
+
+<!-- 1. Changing background colour of div from red to yellow.  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Effects</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation: changeColor 4s ease-in-out 2s forwards;
+        }
+
+        @keyframes changeColor {
+            0% { background-color: red; }
+            100% { background-color: yellow; }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
