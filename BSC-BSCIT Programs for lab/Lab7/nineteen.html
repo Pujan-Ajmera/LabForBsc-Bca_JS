@@ -1,0 +1,30 @@
+<!-- 19. WAP to print the Fibonacci series of a number. (A) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Series</title>
+    <script>
+        function printFibonacci() {
+            let numTerms = 10;
+            let a = 0, b = 1, nextTerm = 0;
+            let count = 1;
+
+            console.log("Fibonacci Series for", numTerms, "terms:");
+            while (count <= numTerms) {
+                console.log(a);
+                nextTerm = a + b;
+                a = b;
+                b = nextTerm;
+                count++;
+            }
+        }
+
+        printFibonacci();
+    </script>
+</head>
+<body>
+    <h1>Check the console for Fibonacci series</h1>
+</body>
+</html>

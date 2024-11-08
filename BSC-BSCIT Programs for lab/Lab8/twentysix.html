@@ -1,0 +1,29 @@
+<!-- 26. WAP to print the GCD of two numbers. (C) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GCD of Two Numbers</title>
+    <script>
+        function findGCD() {
+            let num1 = 56;
+            let num2 = 98;
+            let gcd = 1;
+
+            for (let i = 1; i <= num1 && i <= num2; i++) {
+                if (num1 % i === 0 && num2 % i === 0) {
+                    gcd = i;
+                }
+            }
+
+            console.log("GCD of the two numbers is:", gcd);
+        }
+
+        findGCD();
+    </script>
+</head>
+<body>
+    <h1>Check the console for the GCD of two numbers</h1>
+</body>
+</html>

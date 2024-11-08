@@ -1,0 +1,34 @@
+<!-- 24. WAP to check whether the given number is Armstrong or not. (B) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armstrong Number Check</title>
+    <script>
+        function checkArmstrong() {
+            let num = 153;
+            let sum = 0;
+            let temp = num;
+            let digits = num.toString().length;
+// je pan number hoi tena digits ne length thi poer kari jo same number ave to yes else no
+            while (temp > 0) {
+                let remainder = temp % 10;
+                sum += Math.pow(remainder, digits);
+                temp = Math.floor(temp / 10);
+            }
+
+            if (sum === num) {
+                console.log(num, "is an Armstrong number.");
+            } else {
+                console.log(num, "is not an Armstrong number.");
+            }
+        }
+
+        checkArmstrong();
+    </script>
+</head>
+<body>
+    <h1>Check the console for Armstrong number result</h1>
+</body>
+</html>

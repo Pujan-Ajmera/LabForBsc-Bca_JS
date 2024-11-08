@@ -1,0 +1,27 @@
+<!-- 25. WAP to print the factors of given number. (B) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factors of a Number</title>
+    <script>
+        function printFactors() {
+            let num = 28;
+
+            console.log("Factors of", num, ":");
+
+            for (let i = 1; i <= num; i++) {
+                if (num % i === 0) {
+                    console.log(i);
+                }
+            }
+        }
+
+        printFactors();
+    </script>
+</head>
+<body>
+    <h1>Check the console for factors of the number</h1>
+</body>
+</html>

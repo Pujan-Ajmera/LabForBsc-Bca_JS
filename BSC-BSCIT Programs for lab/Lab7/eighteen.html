@@ -1,0 +1,26 @@
+<!-- 18. WAP to find the factorial of given number. (A) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial of a Number</title>
+    <script>
+        function findFactorial(number) {
+            let factorial = 1;
+            for (let i = 1; i <= number; i++) {
+                factorial *= i;
+            }
+            return factorial;
+        }
+
+        function displayFactorial() {
+            let number = 5;
+            console.log("Factorial of", number, "is:", findFactorial(number));
+        }
+    </script>
+</head>
+<body onload="displayFactorial()">
+    <h1>Check the console for the factorial result</h1>
+</body>
+</html>
