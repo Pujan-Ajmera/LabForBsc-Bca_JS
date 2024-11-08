@@ -1,0 +1,31 @@
+<!-- WAP to swap values of 2 variables without using 3rd variable. (B) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swap Variables Without Third Variable</title>
+    <script>
+        function swapValues() {
+            let a = 5;
+            let b = 10;
+
+            console.log("Before Swap: a =", a, ", b =", b);
+
+            a = a + b;
+            b = a - b;
+            a = a - b;
+
+
+            // a = a ^ b;
+            // b = a ^ b;
+            // a = a ^ b;
+
+            console.log("After Swap: a =", a, ", b =", b);
+        }
+    </script>
+</head>
+<body onload="swapValues()">
+    <h1>Check the console for swapped values</h1>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!-- WAP to display result of a student whether he/she pass or fail the exam. (Criteria is
+>39 marks is all 5 subjects.) Also display the grade of the student. (Criteria >90 then
+grade „A‟, >80 then „B‟, >70 then „C‟, >60 then „D‟, >40 then „E‟, <40 then „F‟).(B) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result and Grade</title>
+    <script>
+        function studentResult() {
+            let marks = [45, 78, 62, 90, 85];
+            let totalMarks = 0;
+            let isPass = true;
+
+            for (let i = 0; i < marks.length; i++) {
+                if (marks[i] < 40) {
+                    isPass = false;
+                    break;
+                }
+                totalMarks += marks[i];
+            }
+
+            if (isPass) {
+                let percentage = (totalMarks / 500) * 100;
+                let grade;
+
+                if (percentage > 90) {
+                    grade = "A";
+                } else if (percentage > 80) {
+                    grade = "B";
+                } else if (percentage > 70) {
+                    grade = "C";
+                } else if (percentage > 60) {
+                    grade = "D";
+                } else if (percentage > 40) {
+                    grade = "E";
+                } else {
+                    grade = "F";
+                }
+
+                console.log("Result: Pass");
+                console.log("Grade:", grade);
+                console.log("Percentage:", percentage + "%");
+            } else {
+                console.log("Result: Fail");
+                console.log("Grade: F");
+            }
+        }
+    </script>
+</head>
+<body onload="studentResult()">
+    <h1>Check the console for the student result and grade</h1>
+</body>
+</html>
