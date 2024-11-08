@@ -1,0 +1,37 @@
+<!-- 
+    1
+   12
+  123
+ 1234
+12345 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Pattern</title>
+    <script>
+        function printPattern() {
+            let n = 5;
+
+            for (let i = 1; i <= n; i++) {
+                let spaces = ' '.repeat(n - i);
+                let num = '';
+
+                for (let j = 1; j <= i; j++) {
+                    num += j;
+                }
+
+                console.log(spaces + num);
+            }
+        }
+
+        printPattern();
+    </script>
+</head>
+<body>
+    <h1>Check the console for the number pattern</h1>
+</body>
+</html>
+

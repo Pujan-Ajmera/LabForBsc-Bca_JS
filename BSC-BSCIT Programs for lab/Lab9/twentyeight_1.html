@@ -1,0 +1,33 @@
+<!--
+5
+54
+543
+5432
+54321
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Pattern</title>
+    <script>
+        function printPattern() {
+            let n = 5;
+
+            for (let i = 1; i <= n; i++) {
+                let num = '';
+                for (let j = n; j >= n - i + 1; j--) {
+                    num += j;
+                }
+                console.log(num);
+            }
+        }
+
+        printPattern();
+    </script>
+</head>
+<body>
+    <h1>Check the console for the number pattern</h1>
+</body>
+</html>

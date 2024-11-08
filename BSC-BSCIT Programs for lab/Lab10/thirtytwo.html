@@ -1,0 +1,52 @@
+<!-- 32. WAP to implement data format validations. (C) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Format Validation</title>
+    <script>
+        function validateForm() {
+            let name = document.querySelector('#name').value;
+            let email = document.querySelector('#email').value;
+            let phone = document.querySelector('#phone').value;
+
+            let namePattern = /^[A-Za-z ]+$/;
+            if (name == "" || !namePattern.test(name)) {
+                alert("Please enter a valid name (only letters and spaces).");
+                return false;
+            }
+
+            let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (email == "" || !emailPattern.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            let phonePattern = /^[0-9]{10}$/;
+            if (phone == "" || !phonePattern.test(phone)) {
+                alert("Please enter a valid 10-digit phone number.");
+                return false;
+            }
+
+            alert("Form submitted successfully!");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h1>Data Format Validation</h1>
+    <form onsubmit="return validateForm()">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email"><br><br>
+
+        <label for="phone">Phone Number:</label><br>
+        <input type="text" id="phone" name="phone"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

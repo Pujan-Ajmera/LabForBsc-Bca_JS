@@ -1,0 +1,50 @@
+<!-- 31. WAP to implement basic validations. (B) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Validation</title>
+    <script>
+        function validateForm() {
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let age = document.getElementById('age').value;
+
+            if (name == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+
+            let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (email == "" || !emailPattern.test(email)) {
+                alert("Please enter a valid email address");
+                return false;
+            }
+
+            if (age == "" || isNaN(age) || age < 18 || age > 100) {
+                alert("Please enter a valid age (18-100)");
+                return false;
+            }
+
+            alert("Form submitted successfully!");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h1>Form Validation Example</h1>
+    <form onsubmit="return validateForm()">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email"><br><br>
+
+        <label for="age">Age:</label><br>
+        <input type="text" id="age" name="age"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

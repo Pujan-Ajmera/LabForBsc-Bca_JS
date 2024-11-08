@@ -1,0 +1,27 @@
+<!-- 30. WAP to demonstrate all 3 types of Pop-up boxes. (A) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop-up Boxes</title>
+    <script>
+        alert("This is an alert box!");
+
+        let confirmResult = confirm("Do you want to proceed?");
+        if (confirmResult) {
+            console.log("User pressed OK.");
+        } else {
+            console.log("User pressed Cancel.");
+        }
+
+        let userName = prompt("Please enter your name:");
+        if (userName != null) {
+            console.log("Hello " + userName + "!");
+        }
+    </script>
+</head>
+<body>
+    <h1>Pop-up Boxes Example</h1>
+</body>
+</html>
