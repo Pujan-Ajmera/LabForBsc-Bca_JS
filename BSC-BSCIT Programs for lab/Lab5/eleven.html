@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Functions in Action</title>
+    <script>
+        function demoStringFunctions() {
+            let str = "Welcome to Darshan University, Hello World! Let's explore JavaScript.   ";
+
+            console.log("charAt(1):", str.charAt(1));
+            console.log("charCodeAt(1):", str.charCodeAt(1));
+            console.log('startsWith("Welcome"):', str.startsWith("Welcome"));
+            console.log('endsWith("JavaScript."):', str.endsWith("JavaScript."));
+            console.log('includes("Darshan"):', str.includes("Darshan"));
+            console.log('indexOf("World"):', str.indexOf("World"));
+            console.log('lastIndexOf("o"):', str.lastIndexOf("o"));
+            console.log('match("JavaScript"):', str.match("JavaScript"));
+            console.log('repeat(2):', str.repeat(2));
+            console.log('replace("World", "Universe"):', str.replace("World", "Universe"));
+            console.log('search("Darshan"):', str.search("Darshan"));
+            console.log('split(" "):', str.split(" "));
+            console.log('substr(7, 5):', str.substr(7, 5));
+            console.log('substring(7, 12):', str.substring(7, 12));
+            console.log('toString():', str.toString());
+            console.log('trim():', str.trim());
+        }
+    </script>
+</head>
+<body onload="demoStringFunctions()">
+    <h1>DU</h1>
+</body>
+</html>
