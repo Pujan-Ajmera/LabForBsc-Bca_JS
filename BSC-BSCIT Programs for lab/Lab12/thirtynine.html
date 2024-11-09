@@ -1,0 +1,27 @@
+<!-- WAP to pass array and a search value to function search and function will return the
+index position -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function search(arr, value) {
+             return arr.indexOf(value);
+        }
+
+        const courses = ["Math", "Physics", "Chemistry", "Biology", "Computer Science"];
+        const searchValue = "Biology";
+        const index = search(courses, searchValue);
+
+        if (index !== -1) {
+            console.log(`The index of "${searchValue}" is: ${index}`);
+        } else {
+            console.log(`"${searchValue}" not found in the array.`);
+        }
+    </script>
+</body>
+</html>

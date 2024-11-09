@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Calculator</title>
+    <style>
+        body { font-family: Arial, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background-color: #f4f4f4; }
+        .calculator { width: 320px; border: 1px solid #ddd; padding: 20px; border-radius: 8px; background-color: #fff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+        .display { width: 100%; padding: 10px; font-size: 24px; text-align: right; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 4px; }
+        .buttons { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+        .button { padding: 15px; font-size: 18px; border: none; border-radius: 4px; cursor: pointer; background-color: #007bff; color: #fff; }
+        .button.operator { background-color: #28a745; }
+        .button.clear { background-color: #dc3545; }
+        .button.equals { background-color: #ffc107; grid-column: span 4; }
+        .button.scientific { background-color: #6c757d; }
+        .button:active { opacity: 0.8; }
+    </style>
+</head>
+<body>
+
+<div class="calculator">
+    <input type="text" id="display" class="display" disabled>
+    <div class="buttons">
+        <button class="button clear" onclick="clearDisplay()">C</button>
+        <button class="button scientific" onclick="calculateSquare()">x²</button>
+        <button class="button scientific" onclick="calculateSquareRoot()">√x</button>
+        <button class="button operator" onclick="appendToDisplay('/')">/</button>
+        <button class="button" onclick="appendToDisplay('7')">7</button>
+        <button class="button" onclick="appendToDisplay('8')">8</button>
+        <button class="button" onclick="appendToDisplay('9')">9</button>
+        <button class="button operator" onclick="appendToDisplay('*')">*</button>
+        <button class="button" onclick="appendToDisplay('4')">4</button>
+        <button class="button" onclick="appendToDisplay('5')">5</button>
+        <button class="button" onclick="appendToDisplay('6')">6</button>
+        <button class="button operator" onclick="appendToDisplay('-')">-</button>
+        <button class="button" onclick="appendToDisplay('1')">1</button>
+        <button class="button" onclick="appendToDisplay('2')">2</button>
+        <button class="button" onclick="appendToDisplay('3')">3</button>
+        <button class="button operator" onclick="appendToDisplay('+')">+</button>
+        <button class="button" onclick="appendToDisplay('0')">0</button>
+        <button class="button" onclick="appendToDisplay('.')">.</button>
+        <button class="button scientific" onclick="calculateSin()">sin</button>
+        <button class="button scientific" onclick="calculateCos()">cos</button>
+        <button class="button scientific" onclick="calculateTan()">tan</button>
+        <button class="button scientific" onclick="calculatePower()">x^y</button>
+        <button class="button equals" onclick="calculateResult()">=</button>
+    </div>
+</div>
+
+<script>
+    function appendToDisplay(value) {
+        document.getElementById('display').value += value;
+    }
+
+    function clearDisplay() {
+        document.getElementById('display').value = '';
+    }
+
+    function calculateResult() {
+        try {
+            document.getElementById('display').value = eval(document.getElementById('display').value);
+        } catch {
+            document.getElementById('display').value = 'Error';
+        }
+    }
+
+    function calculateSquare() {
+        const display = document.getElementById('display');
+        display.value = Math.pow(parseFloat(display.value), 2);
+    }
+
+    function calculateSquareRoot() {
+        const display = document.getElementById('display');
+        display.value = Math.sqrt(parseFloat(display.value));
+    }
+
+    function calculateSin() {
+        const display = document.getElementById('display');
+        display.value = Math.sin(parseFloat(display.value) * Math.PI / 180).toFixed(2);
+    }
+
+    function calculateCos() {
+        const display = document.getElementById('display');
+        display.value = Math.cos(parseFloat(display.value) * Math.PI / 180).toFixed(2);
+    }
+
+    function calculateTan() {
+        const display = document.getElementById('display');
+        display.value = Math.tan(parseFloat(display.value) * Math.PI / 180).toFixed(2);
+    }
+
+    function calculatePower() {
+        const display = document.getElementById('display');
+        display.value += '**';
+    }
+</script>
+
+</body>
+</html>

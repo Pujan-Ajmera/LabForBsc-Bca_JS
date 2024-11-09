@@ -1,0 +1,26 @@
+<!-- 37. WAP to create a static array of courses and print the values using forEach function. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course List</title>
+</head>
+<body>
+
+<h2>Course List</h2>
+<ul id="courseList"></ul>
+
+<script>
+    const courses = ["Mathematics", "Physics", "Chemistry", "Biology", "Computer Science"];
+
+    courses.forEach(course => {
+        const li = document.createElement("li");
+        li.textContent = course;
+        document.getElementById("courseList").appendChild(li);
+    });
+</script>
+
+</body>
+</html>
