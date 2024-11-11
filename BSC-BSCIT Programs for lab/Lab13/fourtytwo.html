@@ -1,0 +1,36 @@
+<!-- WAP to demonstrate use of various inbuilt function on an array like push, pop and
+sort method for sorting string and numbers -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods Example</title>
+</head>
+<body>
+
+    <script>
+        let numbers = [10, 5, 20, 1, 15];
+        let strings = ["apple", "banana", "cherry", "date"];
+        
+        numbers.push(25);
+        strings.push("elderberry");
+
+        console.log("Numbers Array after push:", numbers);
+        console.log("Strings Array after push:", strings);
+
+        numbers.pop();
+        strings.pop();
+
+        console.log("Numbers Array after pop:", numbers);
+        console.log("Strings Array after pop:", strings);
+
+        let sortedNumbers = [...numbers].sort((a, b) => a - b);
+        let sortedStrings = [...strings].sort();
+
+        console.log("Sorted Numbers Array:", sortedNumbers);
+        console.log("Sorted Strings Array:", sortedStrings);
+    </script>
+
+</body>
+</html>

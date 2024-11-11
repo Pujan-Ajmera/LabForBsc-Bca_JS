@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Object Methods</title>
+</head>
+<body>
+
+    <h2>Demonstrating Date Object 'get' Methods</h2>
+    <button onclick="showDateMethods()">Show Date Details</button>
+    <p id="dateInfo"></p>
+
+    <script>
+        function showDateMethods() {
+            const date = new Date();  // Get the current date and time
+
+            const year = date.getFullYear();  // Get the full year (e.g., 2024)
+            const month = date.getMonth() + 1;  // Get the month (0-based index, so adding 1)
+            const day = date.getDate();  // Get the day of the month (1-31)
+            const hours = date.getHours();  // Get the hour (0-23)
+            const minutes = date.getMinutes();  // Get the minutes (0-59)
+            const seconds = date.getSeconds();  // Get the seconds (0-59)
+            const milliseconds = date.getMilliseconds();  // Get the milliseconds (0-999)
+            const dayOfWeek = date.getDay();  // Get the day of the week (0-6, Sunday is 0)
+            const timeZoneOffset = date.getTimezoneOffset();  // Get the time zone offset in minutes
+
+            // Prepare the output
+            const dateInfo = `
+                Full Year: ${year} <br>
+                Month: ${month} <br>
+                Day: ${day} <br>
+                Hour: ${hours} <br>
+                Minute: ${minutes} <br>
+                Second: ${seconds} <br>
+                Milliseconds: ${milliseconds} <br>
+                Day of the Week: ${dayOfWeek} (0-Sunday, 1-Monday, ..., 6-Saturday) <br>
+                Time Zone Offset: ${timeZoneOffset} minutes from UTC
+            `;
+
+            // Display the results
+            document.getElementById("dateInfo").innerHTML = dateInfo;
+        }
+    </script>
+
+</body>
+</html>
+
+</body>
+</html>

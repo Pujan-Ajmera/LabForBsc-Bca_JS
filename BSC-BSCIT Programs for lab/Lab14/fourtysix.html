@@ -1,0 +1,54 @@
+<!--46. WAP to demonstrate all the methods (set) of date object. (A)  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Object 'set' Methods</title>
+</head>
+<body>
+
+    <h2>Demonstrating Date Object 'set' Methods</h2>
+    <button onclick="showSetDateMethods()">Show Date Details After Set Methods</button>
+    <p id="dateInfo"></p>
+
+    <script>
+        function showSetDateMethods() {
+            const date = new Date();
+
+            date.setFullYear(2025);
+            date.setMonth(5);  // June (0-based index, so 5 is June)
+            date.setDate(15);
+            date.setHours(10);
+            date.setMinutes(30);
+            date.setSeconds(45);
+            date.setMilliseconds(500);
+
+            const year = date.getFullYear();
+            const month = date.getMonth() + 1;
+            const day = date.getDate();
+            const hours = date.getHours();
+            const minutes = date.getMinutes();
+            const seconds = date.getSeconds();
+            const milliseconds = date.getMilliseconds();
+            const dayOfWeek = date.getDay();
+            const timeZoneOffset = date.getTimezoneOffset();
+
+            const dateInfo = `
+                Full Year: ${year} <br>
+                Month: ${month} <br>
+                Day: ${day} <br>
+                Hour: ${hours} <br>
+                Minute: ${minutes} <br>
+                Second: ${seconds} <br>
+                Milliseconds: ${milliseconds} <br>
+                Day of the Week: ${dayOfWeek} (0-Sunday, 1-Monday, ..., 6-Saturday) <br>
+                Time Zone Offset: ${timeZoneOffset} minutes from UTC
+            `;
+
+            document.getElementById("dateInfo").innerHTML = dateInfo;
+        }
+    </script>
+
+</body>
+</html>

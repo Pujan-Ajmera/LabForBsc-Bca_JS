@@ -1,0 +1,59 @@
+<!-- 47. WAP to demonstrate various methods of math object. (A) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Object Methods</title>
+</head>
+<body>
+
+    <h2>Demonstrating Math Object Methods</h2>
+    <button onclick="showMathMethods()">Show Math Methods</button>
+    <p id="mathInfo"></p>
+
+    <script>
+        function showMathMethods() {
+            const number1 = 25;
+            const number2 = 4;
+            const number3 = -9;
+            const number4 = Math.PI;
+
+            const absValue = Math.abs(number3);
+            const sqrtValue = Math.sqrt(number1);
+            const powerValue = Math.pow(number2, 3);  // 4^3
+            const roundValue = Math.round(4.6);
+            const ceilValue = Math.ceil(4.2);
+            const floorValue = Math.floor(4.9);
+            const randomValue = Math.random();
+            const maxValue = Math.max(10, 20, 30, 5, 15);
+            const minValue = Math.min(10, 20, 30, 5, 15);
+            const sineValue = Math.sin(Math.PI / 2);
+            const cosValue = Math.cos(Math.PI);
+            const tanValue = Math.tan(Math.PI / 4);
+            const logValue = Math.log(10);
+            const expValue = Math.exp(1);
+
+            const mathInfo = `
+                Absolute value of -9: ${absValue} <br>
+                Square root of 25: ${sqrtValue} <br>
+                4 raised to the power of 3: ${powerValue} <br>
+                Rounded value of 4.6: ${roundValue} <br>
+                Ceiling value of 4.2: ${ceilValue} <br>
+                Floor value of 4.9: ${floorValue} <br>
+                Random value between 0 and 1: ${randomValue} <br>
+                Maximum value: ${maxValue} <br>
+                Minimum value: ${minValue} <br>
+                Sine of PI/2: ${sineValue} <br>
+                Cosine of PI: ${cosValue} <br>
+                Tangent of PI/4: ${tanValue} <br>
+                Natural log of 10: ${logValue} <br>
+                Exponential of 1: ${expValue}
+            `;
+
+            document.getElementById("mathInfo").innerHTML = mathInfo;
+        }
+    </script>
+
+</body>
+</html>

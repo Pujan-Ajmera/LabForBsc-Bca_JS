@@ -1,0 +1,23 @@
+<!-- 40. WAP to create an array of countries read values of an array from user and print it. -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <script>
+        const numCountries = parseInt(prompt("Enter the number of countries:"));
+        
+        const countries = [];
+
+        for (let i = 0; i < numCountries; i++) {
+            const country = prompt(`Enter the name of country ${i + 1}:`);
+            countries.push(country);
+        }
+
+        console.log("The array of countries is:", countries);
+    </script>
+ </body>
+ </html>

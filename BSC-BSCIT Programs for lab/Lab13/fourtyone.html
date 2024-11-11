@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Max and Min from User Input</title>
+</head>
+<body>
+
+    <script>
+        let input = prompt("Enter numbers separated by commas (e.g., 10, 20, -5, 30):");
+
+        let numeric = input.split(',')
+                           .map(item => item.trim())
+                           .filter(item => !isNaN(item) && item !== "")
+                           .map(Number);
+
+        if (numeric.length > 0) {
+            let max = Math.max(...numeric);
+            let min = Math.min(...numeric);
+
+            console.log("Numeric Array:", numeric);
+            console.log("Maximum Value:", max);
+            console.log("Minimum Value:", min);
+        } else {
+            console.log("No valid numeric values were entered.");
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!-- WAP to read an array from user and sort them in ascending order (without using
+inbuilt function). (C) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort Array in Ascending Order</title>
+</head>
+<body>
+
+    <h2>Sort Array in Ascending Order (Bubble Sort)</h2>
+    <label for="arrayInput">Enter numbers (comma-separated): </label>
+    <input type="text" id="arrayInput" placeholder="e.g., 10, 5, 2, 8, 1">
+    <button onclick="sortArray()">Sort</button>
+
+    <p id="result"></p>
+
+    <script>
+        function sortArray() {
+            let input = document.getElementById("arrayInput").value;
+            let arr = input.split(',').map(num => parseInt(num.trim()));  // Convert input to an array of numbers
+            let n = arr.length;
+            for (let i = 0; i < n - 1; i++) {
+                for (let j = 0; j < n - i - 1; j++) {
+                    if (arr[j] > arr[j + 1]) {
+                        let temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
+                    }
+                }
+            }
+            document.getElementById("result").innerText = "Sorted array: " + arr.join(', ');
+        }
+    </script>
+
+</body>
+</html>

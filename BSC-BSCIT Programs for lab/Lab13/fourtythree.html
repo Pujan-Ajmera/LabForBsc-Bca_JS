@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods Example</title>
+</head>
+<body>
+
+    <script>
+        let numbers = [10, 20, 30, 40, 50];
+        let strings = ["apple", "banana", "cherry", "date"];
+        
+        numbers.shift();
+        strings.shift();
+
+        console.log("Numbers Array after shift:", numbers);
+        console.log("Strings Array after shift:", strings);
+
+        numbers.unshift(5);
+        strings.unshift("avocado");
+
+        console.log("Numbers Array after unshift:", numbers);
+        console.log("Strings Array after unshift:", strings);
+
+        numbers.splice(2, 1, 25, 35);
+        strings.splice(1, 2, "blueberry", "fig");
+
+        console.log("Numbers Array after splice:", numbers);
+        console.log("Strings Array after splice:", strings);
+
+        let slicedNumbers = numbers.slice(1, 4);
+        let slicedStrings = strings.slice(0, 2);
+
+        console.log("Sliced Numbers Array:", slicedNumbers);
+        console.log("Sliced Strings Array:", slicedStrings);
+
+        numbers.reverse();
+        strings.reverse();
+
+        console.log("Numbers Array after reverse:", numbers);
+        console.log("Strings Array after reverse:", strings);
+    </script>
+
+</body>
+</html>

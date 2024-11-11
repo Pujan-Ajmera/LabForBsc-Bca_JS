@@ -1,0 +1,42 @@
+<!-- 48. WAP to demonstrate the use of user defined object. (B) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Defined Object</title>
+</head>
+<body>
+
+    <h2>Demonstrating a User Defined Object</h2>
+    <button onclick="createPerson()">Create Person and Display Info</button>
+    <p id="personInfo"></p>
+
+    <script>
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+            this.greet = function() {
+                return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
+            };
+            this.updateAge = function(newAge) {
+                this.age = newAge;
+            };
+        }
+
+        function createPerson() {
+            const person1 = new Person("John", 30);
+            const personInfo = person1.greet();
+
+            person1.updateAge(31);  // Update the age to 31
+            const updatedInfo = person1.greet();
+
+            document.getElementById("personInfo").innerHTML = `
+                ${personInfo} <br>
+                After one year: ${updatedInfo}
+            `;
+        }
+    </script>
+
+</body>
+</html>
