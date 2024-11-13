@@ -1,0 +1,56 @@
+<!-- WAP to design a form using HTML and JavaScript that asks the user to enter his
+date of birth and on clicking the Calculate Button it calls the function that calculates
+how many days are left in your birthday. (C) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Countdown</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input, button {
+            padding: 8px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Birthday Countdown Calculator</h2>
+    
+    <form id="birthdayForm">
+        <label for="dob">Enter Your Date of Birth:</label>
+        <input type="date" id="dob" required>
+        <button type="button" onclick="calculateBirthday()">Calculate</button>
+    </form>
+
+    <h3 id="result"></h3>
+
+    <script>
+        function calculateBirthday() {
+            const dobInput = document.getElementById('dob').value;
+            if (!dobInput) {
+                alert("Please enter a valid date of birth.");
+                return;
+            }
+
+            const dob = new Date(dobInput);
+            const today = new Date();
+            let nextBirthday = new Date(today.getFullYear(), dob.getMonth(), dob.getDate());
+            if (nextBirthday < today) {
+                nextBirthday.setFullYear(today.getFullYear() + 1);
+            }
+
+            const diffTime = nextBirthday - today;
+            const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+            const diffHours = Math.floor(diffTime / (1000 * 60 * 60));
+
+            document.getElementById('result').innerText = `Your next birthday is in ${diffDays} days (${diffHours} hours).`;
+        }
+    </script>
+</body>
+</html>

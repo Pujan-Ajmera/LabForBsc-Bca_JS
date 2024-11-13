@@ -1,0 +1,25 @@
+<!-- 50. WAP to demonstrate the use of getElementsByName() method. (A) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementsByName Demo</title>
+    <script>
+        function displayValues() {
+            let elements = document.getElementsByName("username");
+            let output = "Values: ";
+            for (let i = 0; i < elements.length; i++) {
+                output += elements[i].value + " ";
+            }
+            document.getElementById("output").innerText = output;
+        }
+    </script>
+</head>
+<body>
+    <input type="text" name="username" value="User1">
+    <input type="text" name="username" value="User2">
+    <button onclick="displayValues()">Show Values</button>
+    <p id="output"></p>
+</body>
+</html>

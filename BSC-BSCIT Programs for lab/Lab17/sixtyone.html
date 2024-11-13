@@ -1,0 +1,40 @@
+<!-- 61. WAP to take a character from the user and you have to display whether the key
+pressed is number, alphabet or a symbol. (C) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="write"></p>
+    <input type="text" id="txt">
+    <button onclick="check()">search</button>
+    
+    <script>
+        const write = document.getElementById('write')
+        function check(){
+            const data = document.getElementById('txt').value;
+            if(data.length>1){
+                write.innerHTML = "Greater than *A* character (enter one character)"
+            }
+            else if (typeof input === "number" && Number.isInteger(input)) {
+            return "Integer";
+             } else if (typeof input === "string" && input.length === 1) {
+            const charCode = input.charCodeAt(0);
+            
+            if ((charCode >= 48 && charCode <= 57)) {   // Digit (0-9)
+                return "Character (digit)";
+            } else if ((charCode >= 65 && charCode <= 90) || (charCode >= 97 && charCode <= 122)) {  // Alphabet (A-Z, a-z)
+                return "Character (letter)";
+            } else {
+                return "Symbol";
+            }
+            } else {
+            return "Invalid input";
+         }
+        }
+    </script>
+</body>
+</html>

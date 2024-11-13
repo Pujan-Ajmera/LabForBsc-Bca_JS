@@ -1,0 +1,38 @@
+<!-- 52. WAP to show how to use DHTML. (A). -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DHTML Example</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+    </style>
+    <script>
+        function changeBox() {
+            let box = document.getElementById("box");
+            box.style.backgroundColor = "green"
+        }
+
+        function moveBox() {
+            let box = document.getElementById("box");
+            let left = parseInt(box.style.left) + 20;
+            let top = parseInt(box.style.top) + 20;
+            box.style.left= 80 + "px";
+            box.style.top = 80 + "px";
+        }
+    </script>
+</head>
+<body>
+    <div id="box"></div>
+    <button onclick="changeBox()">Change Box</button>
+    <button onclick="moveBox()">Move Box</button>
+</body>
+</html>

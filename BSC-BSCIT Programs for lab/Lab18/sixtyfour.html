@@ -1,0 +1,29 @@
+<!-- 64. WAP to demonstrate the use of const keyword. (A) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>const Keyword Example</title>
+</head>
+<body>
+    <h2>Demonstration of the const Keyword</h2>
+    <script>
+        const PI = 3.14159;
+        console.log("Value of PI:", PI);
+
+        // Uncommenting the following line will throw an error, because reassigning a const variable is not allowed
+        // PI = 3.14;
+
+        const person = { name: "Alice", age: 25 };
+        console.log("Person before change:", person);
+
+        // You can modify properties of an object declared with const
+        person.age = 26;
+        console.log("Person after change:", person);
+
+        // Uncommenting the following line will throw an error, because reassigning a const object is not allowed
+        // person = { name: "Bob", age: 30 };
+    </script>
+</body>
+</html>

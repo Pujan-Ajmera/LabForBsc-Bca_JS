@@ -1,0 +1,48 @@
+<!-- 60. WAP to demonstrate change in properties of HTML element using JavaScript. (C) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Element Properties</title>
+    <style>
+        #textElement {
+            font-size: 20px;
+            color: black;
+            padding: 10px;
+            text-align: center;
+            width: 200px;
+            margin: 0 auto;
+            border: 2px solid black;
+        }
+        button {
+            margin: 5px;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Change HTML Element Properties</h2>
+
+    <div id="textElement">Hello, World!</div>
+    <br>
+    <button onclick="changeColor()">Change Text Color</button>
+    <button onclick="changeFontSize()">Change Font Size</button>
+    <button onclick="changeBackgroundColor()">Change Background Color</button>
+
+    <script>
+        function changeColor() {
+            document.getElementById('textElement').style.color = 'blue';
+        }
+
+        function changeFontSize() {
+            document.getElementById('textElement').style.fontSize = '30px';
+        }
+
+        function changeBackgroundColor() {
+            document.getElementById('textElement').style.backgroundColor = 'lightyellow';
+        }
+    </script>
+</body>
+</html>

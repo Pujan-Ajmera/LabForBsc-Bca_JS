@@ -1,0 +1,29 @@
+<!-- 58. WAP to greet a user as per the current time. E.g. if anyone opens page at 08:00 am
+it should greet GOOD Morning. (A) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="print">Hii Pujan</p>
+
+    <script>
+        const print = document.getElementById('print')
+        const now = new Date()
+        const hrs = now.getHours()
+        if(hrs>=0 && hrs<=12){
+            print.innerHTML = print.innerHTML + " GOOD Morning"
+        }
+        else if(hrs>=13 && hrs<=17 ){
+            print.innerHTML = print.innerHTML + " GOOD Afternoon"
+        }
+        else{
+            print.innerHTML = print.innerHTML + " GOOD Evening"
+        }
+    </script>
+</body>
+</html>

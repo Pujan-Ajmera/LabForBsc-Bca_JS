@@ -1,0 +1,34 @@
+<!-- 56. WAP to recognize which mouse event is fired. (B) -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <div id="eventBox">Perform a mouse action here</div>
+<p id="eventDisplay"></p>
+
+<script>
+  const eventBox = document.getElementById("eventBox");
+  const eventDisplay = document.getElementById("eventDisplay");
+
+  function showEvent(eventType) {
+    eventDisplay.textContent = `Event: ${eventType}`;
+  }
+
+  eventBox.addEventListener("click", () => showEvent("Click"));
+  eventBox.addEventListener("dblclick", () => showEvent("Double Click"));
+  eventBox.addEventListener("mousedown", () => showEvent("Mouse Down"));
+  eventBox.addEventListener("mouseup", () => showEvent("Mouse Up"));
+  eventBox.addEventListener("mouseenter", () => showEvent("Mouse Enter"));
+  eventBox.addEventListener("mouseleave", () => showEvent("Mouse Leave"));
+  eventBox.addEventListener("mousemove", () => showEvent("Mouse Move"));
+  eventBox.addEventListener("contextmenu", (event) => {
+    event.preventDefault();
+    showEvent("Right Click (Context Menu)");
+  });
+</script>
+ </body>
+ </html>

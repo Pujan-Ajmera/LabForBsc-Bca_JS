@@ -1,0 +1,35 @@
+<!-- 59. WAP to recognize which keyboard event is fired. (B) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Event Recognizer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Keyboard Event Recognizer</h2>
+    <p>Press any key to see which keyboard event is fired.</p>
+    <h3 id="eventInfo"></h3>
+
+    <script>
+        document.addEventListener('keydown', (event) => {
+            document.getElementById('eventInfo').innerText = `Key Down: ${event.key}`;
+        });
+
+        document.addEventListener('keyup', (event) => {
+            document.getElementById('eventInfo').innerText = `Key Up: ${event.key}`;
+        });
+
+        document.addEventListener('keypress', (event) => {
+            document.getElementById('eventInfo').innerText = `Key Pressed: ${event.key}`;
+        });
+    </script>
+</body>
+</html>

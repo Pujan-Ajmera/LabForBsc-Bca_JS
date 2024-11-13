@@ -1,0 +1,22 @@
+<!-- 53. WAP to print current date and time on click of “Date and Time” button. (A) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print the date and time</title>
+</head>
+<body>
+    <p id="print"></p>
+    <button onclick="datetime()">Get Date and Time</button>
+
+    <script>
+        function datetime(){
+            let print = document.getElementById('print')
+            const currentDate = new Date()
+            print.innerHTML = currentDate
+        }
+    </script>
+</body>
+</html>

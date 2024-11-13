@@ -1,0 +1,24 @@
+<!-- 51. WAP to demonstrate the use of getElementsByTagName() method. (A) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementsByTagName Demo</title>
+    <script>
+        function highlightParagraphs() {
+            let paragraphs = document.getElementsByTagName("p");
+            for (let i = 0; i < paragraphs.length; i++) {
+                paragraphs[i].style.color = "blue";
+                paragraphs[i].style.fontWeight = "bold";
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>This is the first paragraph.</p>
+    <p>This is the second paragraph.</p>
+    <p>This is the third paragraph.</p>
+    <button onclick="highlightParagraphs()">Highlight Paragraphs</button>
+</body>
+</html>

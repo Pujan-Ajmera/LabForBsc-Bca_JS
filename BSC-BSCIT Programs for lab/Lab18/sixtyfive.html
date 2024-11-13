@@ -1,0 +1,24 @@
+<!-- 65. WAP to demonstrate callbacks in javascript. (B) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback Example: Sum</title>
+</head>
+<body>
+    <h2>Callback Function to Calculate Sum</h2>
+    <script>
+        function add(a, b, callback) {
+            const sum = a + b;
+            callback(sum); 
+        }
+
+        function displaySum(result) {
+            console.log("The sum is:", result);
+        }
+
+        add(5, 3, displaySum);
+    </script>
+</body>
+</html>
