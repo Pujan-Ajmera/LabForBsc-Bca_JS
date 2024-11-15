@@ -1,0 +1,35 @@
+<!--72. WAP to print prime numbers between the two given numbers using arrow
+function. (C)-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const start = parseInt(prompt('Enter start: '))
+        const end = parseInt(prompt('Enter end: '))
+
+        const isPrime = (num) => {
+        if (num <= 1) return false;
+        for (let i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i === 0) return false;
+        }
+        return true;
+        };
+
+    const findPrimes = (start, end) => {
+        const primes = [];
+        for (let i = start; i <= end; i++) {
+            if (isPrime(i)) primes.push(i);
+        }
+        return primes;
+    };
+
+   const data = findPrimes(start,end)
+   console.log(data)
+</script>
+</body>
+</html>

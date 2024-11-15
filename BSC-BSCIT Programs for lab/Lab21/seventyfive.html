@@ -1,0 +1,19 @@
+<!-- 75. WAP to demonstrate every function of ES6. (A) -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Every Function Demo</title>
+    <script>
+        const demonstrateEvery = () => {
+            const numbers = [2, 4, 6, 8];
+            const isEven = numbers.every(num => num % 2 === 0);
+            document.getElementById("result").textContent = `All numbers are even: ${isEven}`;
+        };
+    </script>
+</head>
+<body>
+    <h1>Every Function Demo</h1>
+    <button onclick="demonstrateEvery()">Run</button>
+    <p id="result"></p>
+</body>
+</html>

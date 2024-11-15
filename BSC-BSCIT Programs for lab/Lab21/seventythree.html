@@ -1,0 +1,23 @@
+<!--73. WAP to demonstrate use of various array methods like join,split. (A)-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Methods Demo</title>
+    <script>
+        const demonstrateArrayMethods = () => {
+            const sentence = "JavaScript is fun";
+            const words = sentence.split(" ");
+            document.getElementById("splitResult").textContent = `Split: ${words}`;
+
+            const joinedWords = words.join("-");
+            document.getElementById("joinResult").textContent = `Join: ${joinedWords}`;
+        };
+    </script>
+</head>
+<body>
+    <h1>Array Methods Demo</h1>
+    <button onclick="demonstrateArrayMethods()">Run</button>
+    <p id="splitResult"></p>
+    <p id="joinResult"></p>
+</body>
+</html>

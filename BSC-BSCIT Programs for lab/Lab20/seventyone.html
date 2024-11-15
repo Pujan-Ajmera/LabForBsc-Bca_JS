@@ -1,0 +1,26 @@
+<!--71. WAP to check whether the given number is palindrome or not using arrow
+function. (B)-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+const isPalindrome = (num) => {
+    const str = num.toString();
+    return str === str.split('').reverse().join('');
+};
+
+const number = 121; 
+if (isPalindrome(number)) {
+    console.log(`${number} is a palindrome.`);
+} else {
+    console.log(`${number} is not a palindrome.`);
+}
+
+    </script>
+</body>
+</html>

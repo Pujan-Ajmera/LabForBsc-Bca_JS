@@ -1,0 +1,25 @@
+<!-- 74. WAP to demonstrate use of various array methods like include,find. (A) -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Methods Demo</title>
+</head>
+<body>
+    <h1>Array Methods Demo</h1>
+    <button onclick="demonstrateArrayMethods()">Run</button>
+    <p id="includesResult"></p>
+    <p id="findResult"></p>
+
+    <script>
+        const demonstrateArrayMethods = () => {
+            const numbers = [10, 20, 30, 40, 50];
+
+            const includesResult = numbers.includes(30);
+            document.getElementById("includesResult").textContent = `Includes 30: ${includesResult}`;
+
+            const findResult = numbers.find(num => num > 25);
+            document.getElementById("findResult").textContent = `First number greater than 25: ${findResult}`;
+        };
+    </script>
+</body>
+</html>

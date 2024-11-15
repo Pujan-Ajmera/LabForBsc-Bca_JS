@@ -1,0 +1,24 @@
+<!--70. WAP to check whether the given number is prime or not using arrow function. (A) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const prime = (number)=>{
+            for (let i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i === 0) {
+            return false;
+                 }
+            }
+            return true;
+        }
+        a = parseInt(prompt("Enter a number to check if prime"))
+        console.log(prime(a))
+    </script>
+</body>
+</html>
