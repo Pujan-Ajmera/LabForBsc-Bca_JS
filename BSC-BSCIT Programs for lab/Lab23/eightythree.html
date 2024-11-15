@@ -1,0 +1,24 @@
+<!-- 83. WAP to create student name array and print each elements using ES6 foEach
+method. (A) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="item"></ul>
+    <script>
+        const students = ['jayesh', 'rinku', 'polly'];
+        const item = document.getElementById('item');
+
+        students.forEach(student => {
+            const li = document.createElement('li');
+            li.textContent = student;
+            item.appendChild(li);
+        });
+    </script>
+</body>
+</html>

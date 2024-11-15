@@ -1,0 +1,23 @@
+<!-- WAP to create a new array containing number of elements like color name in small
+letter (e.g. ['red', 'green', 'blue']) and convert each array element to Capitalized
+letter using map method. (B) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        arr = ['red','green','black']
+        const data = arr.map((a)=>{
+            let v = a.substring(0,1).toUpperCase()
+            let w = a.substring(1)
+            return v+w
+        })
+
+        console.log(data)
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!-- 87. WAP to demonstrate the use of object destructuring. (A) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Destructuring Example</title>
+</head>
+<body>
+    <h1>Object Destructuring in JavaScript</h1>
+
+    <script>
+        const person = {
+            name: "John Doe",
+            age: 25,
+            location: "New York"
+        };
+
+        const { name, age, location } = person;
+
+        document.body.innerHTML += `<p>Name: ${name}</p>`;
+        document.body.innerHTML += `<p>Age: ${age}</p>`;
+        document.body.innerHTML += `<p>Location: ${location}</p>`;
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!--90. WAP to demonstrate import module. (A)-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module Import Example</title>
+</head>
+<body>
+    <h1>JavaScript Module Import Example</h1>
+    <script type="module">
+    import { add, subtract } from './ninty.js';
+
+    const sum = add(5, 3);
+    const difference = subtract(5, 3);
+
+    console.log('Sum:', sum);
+    console.log('Difference:', difference);
+
+
+    </script>
+</body>
+</html>

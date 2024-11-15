@@ -1,0 +1,26 @@
+<!-- 81. WAP to perform insert, update and delete operation on a static array using
+Javascript. (B) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let fruits = ['Apple', 'Banana', 'Cherry'];
+
+        fruits.push('Dragonfruit');
+        fruits.splice(1, 0, 'Blueberry');
+        console.log('After Insert:', fruits);
+
+        fruits[2] = 'Mango'; 
+        console.log('After Update:', fruits);
+
+        fruits.splice(3, 1);
+        console.log('After Delete:', fruits);
+
+    </script>
+</body>
+</html>

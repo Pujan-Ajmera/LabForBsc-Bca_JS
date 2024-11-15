@@ -1,0 +1,20 @@
+<!--88. WAP to demonstrate the use of array destructuring. (A)-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Destructuring Example</title>
+</head>
+<body>
+    <h1>Array Destructuring in JavaScript</h1>
+
+    <script>
+        const fruits = ["Apple", "Banana", "Orange", "Grapes"];
+        const [firstFruit, secondFruit, , fourthFruit] = fruits;
+        document.body.innerHTML += `<p>First fruit: ${firstFruit}</p>`;
+        document.body.innerHTML += `<p>Second fruit: ${secondFruit}</p>`;
+        document.body.innerHTML += `<p>Fourth fruit: ${fourthFruit}</p>`;
+    </script>
+</body>
+</html>
