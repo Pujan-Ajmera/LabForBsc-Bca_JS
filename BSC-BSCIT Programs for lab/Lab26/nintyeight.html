@@ -1,0 +1,35 @@
+<!-- 98. WAP to demonstrate chaining. (A) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery Chaining Demo</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    #box {
+      width: 100px;
+      height: 100px;
+      background-color: lightblue;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="chainButton">Start Chaining</button>
+  <div id="box"></div>
+
+  <script>
+    $("#chainButton").click(function () {
+      $("#box")
+        .animate({ width: "200px", height: "200px" }, 500)
+        .css("background-color", "yellow")
+        .fadeOut(500)
+        .fadeIn(500);
+    });
+  </script>
+
+</body>
+</html>
+ 

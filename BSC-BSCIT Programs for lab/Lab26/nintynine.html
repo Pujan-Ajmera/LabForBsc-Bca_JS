@@ -1,0 +1,42 @@
+<!--99. WAP to demonstrate DOM Manipulation in JQuery. (B)-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery DOM Manipulation</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    #box {
+      width: 100px;
+      height: 100px;
+      background-color: lightblue;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2 id="heading">Hello, jQuery!</h2>
+  <button id="changeTextBtn">Change Text</button>
+  <button id="changeColorBtn">Change Box Color</button>
+  <button id="addElementBtn">Add New Element</button>
+
+  <div id="box"></div>
+
+  <script>
+    $("#changeTextBtn").click(function () {
+      $("#heading").text("Text Changed!");
+    });
+
+    $("#changeColorBtn").click(function () {
+      $("#box").css("background-color", "pink");
+    });
+
+    $("#addElementBtn").click(function () {
+      $("body").append("<p>This is a new paragraph added to the page.</p>");
+    });
+  </script>
+
+</body>
+</html>

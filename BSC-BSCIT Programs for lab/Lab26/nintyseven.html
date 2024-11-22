@@ -1,0 +1,41 @@
+<!--97. WAP to demonstrate Effects in JQuery.  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery Effects Demo</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    #box {
+      width: 100px;
+      height: 100px;
+      background-color: lightblue;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="fadeButton">Fade</button>
+  <button id="slideButton">Slide</button>
+  <button id="toggleButton">Toggle</button>
+
+  <div id="box"></div>
+
+  <script>
+    $("#fadeButton").click(function () {
+      $("#box").fadeToggle();
+    });
+
+    $("#slideButton").click(function () {
+      $("#box").slideToggle();
+    });
+
+    $("#toggleButton").click(function () {
+      $("#box").toggle();
+    });
+  </script>
+
+</body>
+</html>

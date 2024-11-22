@@ -1,0 +1,48 @@
+<!--100. WAP to demonstrate Traversing in JQuery. (B)-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery Traversing</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    ul {
+      list-style-type: none;
+    }
+    li {
+      margin: 10px;
+      padding: 5px;
+      background-color: lightblue;
+    }
+  </style>
+</head>
+<body>
+
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+  </ul>
+
+  <button id="nextBtn">Next Item</button>
+  <button id="prevBtn">Previous Item</button>
+
+  <script>
+    $(document).ready(function () {
+      let currentItem = $("li").first(); 
+      $("#nextBtn").click(function () {
+        currentItem = currentItem.next();
+        currentItem.css("background-color", "lightgreen");
+      });
+
+      $("#prevBtn").click(function () {
+        currentItem = currentItem.prev();
+        currentItem.css("background-color", "lightcoral");
+      });
+    });
+  </script>
+
+</body>
+</html>
