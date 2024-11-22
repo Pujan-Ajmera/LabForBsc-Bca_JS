@@ -1,0 +1,36 @@
+<!-- 95. WAP to demonstrate custom selectors of jQuery. (A) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery Custom Selectors</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    .highlight {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+
+  <ul>
+    <li data-price="10">Item 1</li>
+    <li data-price="30">Item 2</li>
+    <li data-price="20">Item 3</li>
+  </ul>
+
+  <button id="highlightExpensive">Highlight Expensive Items</button>
+
+  <script>
+    $.expr[':'].expensive = function (elem) {
+      return parseInt($(elem).data("price"), 10) > 20;
+    };
+
+    $("#highlightExpensive").click(function () {
+      $("li:expensive").toggleClass("highlight");
+    });
+  </script>
+
+</body>
+</html>

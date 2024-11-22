@@ -1,0 +1,48 @@
+<!-- 96. WAP to demonstrate various event methods in jQuery. (A) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery Event Methods</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    .highlight {
+      background-color: lightblue;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="clickBtn">Click Me</button>
+  <input type="text" id="focusInput" placeholder="Focus here">
+  <p id="hoverText">Hover over this text</p>
+  <p id="doubleClickText">Double-click this text</p>
+
+  <script>
+    $("#clickBtn").click(function () {
+      alert("Button Clicked!");
+    });
+
+    $("#focusInput").focus(function () {
+      $(this).addClass("highlight");
+    }).blur(function () {
+      $(this).removeClass("highlight");
+    });
+
+    $("#hoverText").hover(
+      function () {
+        $(this).addClass("highlight");
+      },
+      function () {
+        $(this).removeClass("highlight");
+      }
+    );
+
+    $("#doubleClickText").dblclick(function () {
+      $(this).text("You double-clicked me!");
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!-- 94. WAP to demonstrate selectors of jQuery. (A) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery Selectors Demo</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .highlight {
+      background-color: yellow;
+      font-weight: bold;
+    }
+    button {
+      margin: 5px 0;
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>jQuery Selectors Demo</h1>
+  
+  <p id="unique">This is a paragraph with an id selector.</p>
+  <p class="common">This is the first paragraph with a class selector.</p>
+  <p class="common">This is the second paragraph with a class selector.</p>
+  <p>This is a paragraph selected by element type.</p>
+  <p data-role="special">This paragraph uses an attribute selector.</p>
+  
+  <button id="highlightId">Highlight by ID</button>
+  <button id="highlightClass">Highlight by Class</button>
+  <button id="highlightElement">Highlight by Element</button>
+  <button id="highlightAttr">Highlight by Attribute</button>
+
+  <script>
+    $(document).ready(function () {
+      $("#highlightId").click(function () {
+        $("#unique").toggleClass("highlight");
+      });
+
+      $("#highlightClass").click(function () {
+        $(".common").toggleClass("highlight");
+      });
+
+      $("#highlightElement").click(function () {
+        $("p").toggleClass("highlight");
+      });
+
+      $("#highlightAttr").click(function () {
+        $("p[data-role='special']").toggleClass("highlight");
+      });
+    });
+  </script>
+
+</body>
+</html>
